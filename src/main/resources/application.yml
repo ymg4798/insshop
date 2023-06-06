@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:h2:tcp://localhost/~/insshop
+    username: sa
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
+  config:
+    activate:
+      on-profile: test
+  sql:
+    init:
+      schema-locations: classpath*:sql/schema.sql
+      mode: always

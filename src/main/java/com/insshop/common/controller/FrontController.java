@@ -1,4 +1,4 @@
-package com.insshop.controller;
+package com.insshop.common.controller;
 
 import org.springframework.stereotype.Controller;
 
