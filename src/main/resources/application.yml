@@ -6,10 +6,19 @@ spring:
   thymeleaf:
     prefix: classpath:templates/
     suffix: .html
+    mode: HTML
+    check-template-location: true
     cache: false
   config:
     activate:
       on-profile: test
+  # 실 운영서버에서는 주의
+  devtools:
+    remote:
+      restart:
+        enabled: false
+    livereload:
+      enabled: true
   sql:
     init:
       schema-locations: classpath*:sql/schema.sql
